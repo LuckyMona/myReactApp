@@ -1,0 +1,201 @@
+@import "common";
+
+/*****和其他页面共用部分  Start  *****/
+#steps{ 
+	.wh(600px; 40px;);
+	margin:40px auto;
+	p {
+		.wh(300px; 40px;);
+		background: darken(@lightGray,10%);
+		.font(16px; white; 40px;);
+		text-align: center;
+		float:left;
+		position: relative;
+		
+		&:after{
+			content:"";
+			display: block;
+			.wh(0;0;);
+			border: 20px solid transparent;
+		    border-left-color: darken(@lightGray,10%);
+		    position: absolute;
+		    right: -40px;
+		    z-index: 100;
+		    top: 0;
+		}
+
+	}
+	p.active {
+		background: @headerBg;
+		&:after {
+			border-left-color: @headerBg;
+		}
+	}
+	
+
+}
+
+.selectModule .project_g {
+	h3 { 
+		.wh(500px; 50px); 
+		.bgColor(lighten(@headerBg, 10%);white;); 
+		.font(22px;white;50px;);
+		padding:0 10px;
+	}
+	ul:not(.versionW) { 
+		margin-top: 10px; 
+		display: none;
+		li {
+			.wh(320px; 30px);
+			float:right;
+			.bgColor(#D0CECE; black;); 
+			list-style: none;
+			margin-bottom: 10px;
+			a {
+				box-sizing: border-box;
+				display: block;
+				.pd(0; 10px);
+				.font(14px; black; 30px);
+				&:hover {
+					text-decoration: none;
+					border:1px solid @headerBg;
+					cursor: pointer;
+				}
+				&:visited {
+					text-decoration: none;
+				}
+				
+			}
+		}
+	 }
+	.activeUl { display: block !important; }
+	
+}
+
+/*****和其他页面共用部分  END  *****/
+
+.selectModule aside { width:350px; float:left; margin-left: 60px; }
+.selectModule article { float:left; }
+.selectModule .project_g {
+	width: 400px;
+	position: relative;
+	margin-bottom: 20px;
+
+	label { 
+		text-align: center;
+		float:left;
+		.wh(40px; 40px;);
+		line-height: 40px;
+		border-radius: 50%;
+		margin-right: 10px;
+		border: 1px solid #7C7C7C;
+		margin-bottom: 0;
+		&:hover {
+			background: #DBDBDB;
+		}
+		span { 
+			display: none;
+			font-size: 18px; 
+			position: relative;
+			top: 2px; 
+		}
+	}
+	
+	h3 {  
+		.wh(350px; 40px;);
+		.font(18px; white; 40px;);
+		.pr(0);
+		margin-top: 0;
+    	margin-bottom: 0;
+		position: relative;
+		float:left;
+		i { font-size:14px; }
+		.caretWrap {
+			display: inline-block;
+			width: 40px;
+    		text-align: center;
+    		float: right;
+    		.caret{
+    			.caretX(6px);
+    		}
+    		background: lighten(#669acf, 10%);
+		}
+	}
+	.versionW {
+		border: 1px solid #AFABAB;
+		background: #EDEDED;
+		width: 150px;
+		position: absolute;
+    	right: 0;
+    	z-index: 100;
+    	display: none;
+    	padding-left:0;
+		li{
+			height: 30px;
+			line-height: 30px;
+			padding: 0 20px;
+			list-style: none;
+			&:hover {
+				.bgColor(#5B9BD5; #fff);
+			}
+		}
+		&.showVersion {
+			display: block;
+		}
+	}
+
+}
+
+.selectModule .selected label {
+	background: #BDD7EE;
+	border:none;
+	span { display:inline-block; color:#5B9BD5; }
+	&:hover {
+		background: #BDD7EE;
+	}
+}
+
+.selectModule article {
+	margin-left:100px;
+}
+
+.selectModule .table_myThDark {
+	width:600px;
+}
+.selectModule .footerBtns { 
+	display: flex; 
+	display: -webkit-flex; 
+	justify-content:flex-end;
+	* { margin-left: 10px;}
+	.btn-default { background: #E6E6E6; }
+	margin-top: 100px;
+}
+.selectModule .dialogBodyW {
+	ul{
+		padding:40px;
+		padding-bottom: 20px;
+		li {
+			float:left;
+			.wh(220px; 30px;);
+			.bgColor(#E7E6E6; #333);
+			margin-bottom: 10px;
+			line-height: 30px;
+    		padding-left: 10px;
+			&:nth-child(2n-1) {margin-right:20px;}
+		}
+	}
+}
+
+.selectModule .dialogBody2 {
+	padding: 110px 35px;
+	a {
+		display:block;
+		color:#2E75B6;
+		font-size:16px;
+		margin-left: 176px;
+		text-decoration:underline; 
+		&:not(:last-child) { margin-bottom:10px; }
+	}
+}
+
+#newTableBtn {padding:4px 24px;}

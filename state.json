@@ -1,0 +1,42 @@
+{
+	"projects":[
+		{"projectID":"11","projectName":"项目名AA",
+		 "docs":["文档名IDaa","文档名IDaa"],
+		},
+	],
+
+	"templates":[
+		{
+			"templateID":"11",
+			"templatesRows":[
+				{"rowID":"r11", "key":"key11", "myType":"String", "reference":"xx", "note":"xxx"},
+				{"rowID":"r12", "key":"key11", "myType":"String", "reference":"xx", "note":"xxx"},
+			]
+		},
+	],
+	"modules":[
+		{
+			"moduleID":"m11",
+			"moduleName":"模块名aa",
+			"versions":["v11", "v22"]
+
+		}
+	],
+	"moduleTables":[
+		{ "moduleID":"m22", "version":"v11", "tableName":"xxx", "tableID":"t11", 
+		  "rows":[
+		  	{"rowID":"r11", "rowName":"xxx", "rowType":"String", "reference":"xxx", "note":"xxx"},
+		  ]
+		}
+	],
+	"docs":{
+		"modules":["moduleName_version11","moduleName_version22"],
+		"template":{
+			"templateID":"11",
+			"templatesRows":[
+				{"rowID":"r11", "key":"key11", "myType":"String", "reference":"xx", "note":"xxx"},
+				{"rowID":"r12", "key":"key11", "myType":"String", "reference":"xx", "note":"xxx"},
+			]
+		}
+	}
+}

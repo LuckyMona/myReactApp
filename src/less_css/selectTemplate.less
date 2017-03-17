@@ -1,0 +1,83 @@
+@import "common";
+
+#steps{ 
+	.wh(600px; 40px;);
+	margin:40px auto;
+	p {
+		.wh(300px; 40px;);
+		background: darken(@lightGray,10%);
+		.font(16px; white; 40px;);
+		text-align: center;
+		float:left;
+		position: relative;
+		
+		&:after{
+			content:"";
+			display: block;
+			.wh(0;0;);
+			border: 20px solid transparent;
+		    border-left-color: darken(@lightGray,10%);
+		    position: absolute;
+		    right: -40px;
+		    z-index: 100;
+		    top: 0;
+		}
+
+	}
+	p.active {
+		background: @headerBg;
+		&:after {
+			border-left-color: @headerBg;
+		}
+	}
+	
+
+}
+
+
+
+#templatesWrap > div {
+	&:first-child {  margin-right: 98px; }
+	width:550px;
+	float:left;
+	margin-bottom: 50px;
+	.tableWrap {
+		
+		margin-bottom: 10px;
+		&.active {
+			border:1px solid #00B0F0; 
+			background: #9DC3E6;
+		}
+	}
+	table {
+		width:92%;
+		margin:20px auto;
+	}
+}
+
+.selectTemplate .btnWrap button{ float:right; margin-left: 20px;}
+
+.mg35 { margin:35px; }
+.selectTemplate .addRow { 
+	.wh(30px; 30px;);
+	border-radius: 50%;
+	.bgColor(#5B9BD5; #fff;);
+    border-radius: 50%;
+    // line-height: 30px;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: -20px;
+    margin-right: -20px;
+    float: right;
+ }
+.selectTemplate .tableInpt {
+ 	width: 100%;
+    border: none;
+    background: none;
+    border-bottom: 1px solid #aaa;
+    &:focus { outline:none; }
+}
+
+.selectTemplate .btn a { color:#fff; }
